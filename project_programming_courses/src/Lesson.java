@@ -5,15 +5,14 @@ public class Lesson {
     private int duration; // in minutes
     private List<Video> videos;
 
-    public Lesson(String title, int duration, List<Video> videos) {
+    public Lesson(String title, int duration) {
         this.title = title;
-        this.duration = duration;
-        this.videos = videos;
+        this.videos = new java.util.ArrayList<>();
     }
 
     public void addVideo(String title) {
-        Video video = new Video(title);
-        videos.add(video);
+        // composition
+        videos.add(new Video(title));
     }
 
     @Override
