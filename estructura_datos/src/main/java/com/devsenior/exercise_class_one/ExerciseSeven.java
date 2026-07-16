@@ -1,4 +1,8 @@
 package com.devsenior.exercise_class_one;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /*
  Limpieza de base de datos (Método clear y isEmpty)
 Objetivo
@@ -14,6 +18,18 @@ Bandeja de entrada limpia
  */
 public class ExerciseSeven {
     public static void main(String[] args) {
+        List<String> mensajesPendientes = new ArrayList<>();
+        mensajesPendientes.add("Mensaje 1");
+        mensajesPendientes.add("Mensaje 2");
+        mensajesPendientes.add("Mensaje 3");
 
+        System.out.println("¿La lista tiene mensajes? " + (!mensajesPendientes.isEmpty() ? "Sí" : "No"));
+
+        mensajesPendientes.clear();
+        System.out.println("¿La lista tiene mensajes? " + (!mensajesPendientes.isEmpty() ? "Sí" : "No"));
+
+        if (mensajesPendientes.isEmpty()) {
+            System.out.println("Bandeja de entrada limpia");
+        }
     }
 }
